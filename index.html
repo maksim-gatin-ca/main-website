@@ -126,6 +126,14 @@
         border-radius: 2px;
       }
 
+      .games-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
       .game-card {
         background: #fff;
         padding: 30px;
@@ -133,8 +141,11 @@
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        max-width: 500px;
-        margin: 0 auto;
+      }
+
+      .game-card.coming-soon {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border: 2px dashed #667eea;
       }
 
       .game-card:hover {
@@ -279,31 +290,47 @@
       <!-- Games Section -->
       <div class="games-section">
         <h2>🎮 My Games</h2>
-        <div class="game-card">
-          <div class="game-icon">⭕❌</div>
-          <h3>Tic Tac Toe</h3>
-          <p>
-            My very first game! This is a classic Tic Tac Toe game that I built
-            with the help of AI. It runs right in your web browser and you can
-            play against a friend. I learned so much about HTML, CSS, and
-            JavaScript while creating this. Try it out and let me know what you
-            think!
-          </p>
-          <a
-            href="http://binaryforce.ca/maksim/tic-tac-toe.html"
-            target="_blank"
-            class="play-button"
-            style="margin-right: 15px;"
-          >
-            🎮 Play Game
-          </a>
-          <a
-            href="https://github.com/maksim-gatin-ca/game-tic-tac-toe"
-            target="_blank"
-            class="play-button"
-          >
-            📁 View Code
-          </a>
+        <div class="games-grid">
+          <div class="game-card">
+            <div class="game-icon">⭕❌</div>
+            <h3>Tic Tac Toe</h3>
+            <p>
+              My very first game! This is a classic Tic Tac Toe game that I built
+              with the help of AI. It runs right in your web browser and you can
+              play against a friend. I learned so much about HTML, CSS, and
+              JavaScript while creating this. Try it out and let me know what you
+              think!
+            </p>
+            <a
+              href="http://binaryforce.ca/maksim/tic-tac-toe.html"
+              target="_blank"
+              class="play-button"
+              style="margin-right: 15px;"
+            >
+              🎮 Play Game
+            </a>
+            <a
+              href="https://github.com/maksim-gatin-ca/game-tic-tac-toe"
+              target="_blank"
+              class="play-button"
+            >
+              📁 View Code
+            </a>
+          </div>
+
+          <div class="game-card coming-soon">
+            <div class="game-icon">🚀</div>
+            <h3>More Games Coming Soon!</h3>
+            <p>
+              I'm working on some awesome new games and projects!
+              Keep checking back to see what cool stuff I'll build next.
+              Maybe a puzzle game, or something with cool animations?
+              The possibilities are endless! 🎯
+            </p>
+            <div style="padding: 15px 30px; color: #667eea; font-weight: bold; font-size: 1.1rem;">
+              🔮 Stay Tuned!
+            </div>
+          </div>
         </div>
       </div>
 
