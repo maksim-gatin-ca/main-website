@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal website for Maksim Gatin, an 11-year-old developer. The site is a single-page application built with vanilla HTML, CSS, and JavaScript that showcases his coding journey and projects.
+This is a personal website for Maksim Gatin, a young developer. The site is a single-page application built with vanilla HTML, CSS, and JavaScript that showcases his coding journey and projects with a fun, casual tone.
 
 ## Architecture
 
@@ -14,10 +14,10 @@ This is a personal website for Maksim Gatin, an 11-year-old developer. The site 
 
 ## Key Components
 
-- **Hero section**: Profile photo placeholder, name, and animated coding icons
-- **About section**: Personal introduction and coding journey
-- **Games section**: Showcases developed games with links to external repositories
-- **Interactive features**: Animated sparkles effect and hover animations
+- **Hero section**: Profile photo (images/maksim-photo.jpeg), name, subtitle with casual tone, and animated coding icons
+- **About section**: Personal introduction with fun, encouraging language - avoid formal "programmer" terminology
+- **Games section**: Grid layout showcasing completed games and "coming soon" placeholder cards
+- **Interactive features**: Animated sparkles effect, hover animations, and floating icon animations
 
 ## Development Workflow
 
@@ -40,11 +40,20 @@ Since this is a static HTML website with no build process:
 ## Styling Approach
 
 - All CSS is embedded in the `<style>` tag within `index.html`
-- Uses CSS Grid/Flexbox for layout
+- Uses CSS Grid for games section layout (responsive auto-fit grid)
 - Gradient backgrounds and modern card-based design
 - Responsive design with mobile breakpoints
-- CSS animations for interactive elements
+- CSS animations for interactive elements (sparkles, floating icons, hover effects)
+
+## Content Guidelines
+
+- **Tone**: Keep language casual, fun, and age-appropriate - avoid pressure-inducing terms like "Future Programmer"
+- **Age references**: Avoid mentioning specific age - use abstract terms like "young developer" or "code enthusiast"
+- **Game cards**: Each game should have both "Play Game" and "View Code" buttons linking to live demo and GitHub repo
+- **Coming soon cards**: Use encouraging, excited language about future projects
 
 ## External Links
 
-The website links to external game projects hosted on GitHub Pages. When working with games section, verify that linked URLs are accessible and functional.
+- Games link to binaryforce.ca for live demos
+- GitHub repositories link to maksim-gatin-ca organization
+- All external links open in new tabs (_blank target)
