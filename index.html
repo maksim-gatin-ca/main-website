@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksim Gatin - Young Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 8px solid #667eea;
+            margin: 0 auto 30px;
+            position: relative;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .about {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .about h2::after {
+            content: '';
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            display: block;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #555;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .games-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .games-section h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .games-section h2::after {
+            content: '';
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            display: block;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .game-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .game-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .game-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .game-card p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .play-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+
+        .coding-icons {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .coding-icons span {
+            margin: 0 10px;
+            opacity: 0.7;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .coding-icons span:nth-child(2) {
+            animation-delay: -0.5s;
+        }
+
+        .coding-icons span:nth-child(3) {
+            animation-delay: -1s;
+        }
+
+        .coding-icons span:nth-child(4) {
+            animation-delay: -1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .highlight {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="profile-photo">
+                <img src="images/maksim-photo.jpeg" alt="Maksim Gatin">
+            </div>
+            <h1>Maksim Gatin</h1>
+            <p class="subtitle">🚀 Young Developer | 11 Years Old | Future Programmer</p>
+            <div class="coding-icons">
+                <span>💻</span>
+                <span>🎮</span>
+                <span>🔥</span>
+                <span>⚡</span>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about">
+            <h2>My Coding Journey</h2>
+            <p>
+                Hi! I'm Maksim, and I'm <span class="highlight">11 years old</span> and just starting my amazing journey into programming! 
+                Looking at my parents who are experienced programmers, I got inspired to create my own programs and games. 
+                With the help of AI and lots of curiosity, I'm learning to build cool things that I can share with my friends. 
+                This is just the beginning of my adventure in the world of <span class="highlight">coding</span>, and I'm super excited 
+                to see where it takes me! Every day I learn something new, and every project teaches me how to think like a programmer.
+            </p>
+        </div>
+
+        <!-- Games Section -->
+        <div class="games-section">
+            <h2>🎮 My Games</h2>
+            <div class="game-card">
+                <div class="game-icon">⭕❌</div>
+                <h3>Tic Tac Toe</h3>
+                <p>
+                    My very first game! This is a classic Tic Tac Toe game that I built with the help of AI. 
+                    It runs right in your web browser and you can play against a friend. I learned so much 
+                    about HTML, CSS, and JavaScript while creating this. Try it out and let me know what you think!
+                </p>
+                <a href="https://maksim-gatin-ca.github.io/game-tic-tac-toe/tic-tac-toe.html" 
+                   target="_blank" 
+                   class="play-button">
+                    🎮 Play Game
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>🌟 Built with passion by Maksim Gatin | Keep coding, keep creating! 🌟</p>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive sparkles
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.querySelector('.hero');
+            
+            function createSparkle() {
+                const sparkle = document.createElement('div');
+                sparkle.innerHTML = '✨';
+                sparkle.style.position = 'absolute';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.fontSize = Math.random() * 20 + 10 + 'px';
+                sparkle.style.opacity = '0';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.transition = 'opacity 2s ease-in-out';
+                
+                hero.style.position = 'relative';
+                hero.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    sparkle.style.opacity = '0.7';
+                }, 100);
+                
+                setTimeout(() => {
+                    sparkle.style.opacity = '0';
+                    setTimeout(() => {
+                        if (sparkle.parentNode) {
+                            sparkle.parentNode.removeChild(sparkle);
+                        }
+                    }, 2000);
+                }, 3000);
+            }
+            
+            // Create sparkles periodically
+            setInterval(createSparkle, 3000);
+        });
+    </script>
+</body>
+</html>
